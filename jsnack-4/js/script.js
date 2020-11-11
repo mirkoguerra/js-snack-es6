@@ -5,13 +5,13 @@ $(document).ready(function(){
   // Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
   // Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 
-  var nomeSquadra = [];
+  let nomeSquadra = [];
 
-  for (var i = 0; i <= 2; i++) {
+  for (let i = 0; i <= 2; i++) {
     nomeSquadra[i] = prompt("inserire il nome della squadra");
-  }  
+  }
 
-  var squadre = [
+  let squadre = [
     {
       nome: nomeSquadra[0],
       puntiFatti: 0,
@@ -40,12 +40,12 @@ $(document).ready(function(){
   return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  for (var i = 0; i < squadre.length; i++) {
+  for (let i = 0; i < squadre.length; i++) {
     squadre[i]["puntiFatti"] = getRandomInt(0, 50)
     squadre[i]["falliSubiti"] = getRandomInt(0, 100)
-    $(".squadre").append("nome: " + squadre[i]["nome"] + "<br>");
-    $(".squadre").append("punti fatti: " + squadre[i]["puntiFatti"] + "<br>");
-    $(".squadre").append("falli subiti: " + squadre[i]["falliSubiti"] + "<br>");
+    $(".squadre").append(`nome: ${squadre[i].nome}<br>`);
+    $(".squadre").append(`punti fatti: ${squadre[i].puntiFatti}<br>`);
+    $(".squadre").append(`falli subiti: ${squadre[i].falliSubiti}<br>`);
   }
 
   // console.log(squadre);
