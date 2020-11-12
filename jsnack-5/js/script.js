@@ -21,9 +21,7 @@ $(document).ready(function(){
 
   // creo il nuovo array, filtrato rispetto a quello di partenza
   const myNewArray = myArray.filter((element, index) => {
-    if ((index >= min) && (index <= max)) {
-      return element
-    }
+      return (index >= min) && (index <= max);
   });
 
   console.log('myNewArray', myNewArray);

@@ -46,4 +46,6 @@ $(document).ready(function(){
     $(".new-array").append(`<p>nome: ${newArrayObj[i].name}, tipo: ${newArrayObj[i].type}, colore: ${newArrayObj[i].color}, posizione: ${newArrayObj[i].position}</p>`)
   }
 
+  console.log('array di partenza', arrayObj);
+
 });
