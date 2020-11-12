@@ -35,7 +35,6 @@ $(document).ready(function(){
   }
 
   // nuovo array, uguale al precedente, eccetto per il fatto che gli oggetti in esso contenuto hanno una proprietà aggiuntiva, "position", alla quale è assegnato come valore una lettera casuale
-
   const newArrayObj = arrayObj.map(element =>
   {
     let newObject = {
@@ -50,7 +49,5 @@ $(document).ready(function(){
   for (let i = 0; i < newArrayObj.length; i++){
     $(".new-array").append(`<p>nome: ${newArrayObj[i].name}, tipo: ${newArrayObj[i].type}, colore: ${newArrayObj[i].color}, posizione: ${newArrayObj[i].position}</p>`)
   }
-
-  console.log('array di partenza', arrayObj);
 
 });
