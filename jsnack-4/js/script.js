@@ -5,29 +5,21 @@ $(document).ready(function(){
   // Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
   // Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 
-  let nomeSquadra = [];
+  const nomeSquadra = [];
 
   for (let i = 0; i <= 2; i++) {
     nomeSquadra[i] = prompt("inserire il nome della squadra");
   }
 
-  let squadre = [
-    {
-      nome: nomeSquadra[0],
+  const squadre = [];
+
+  for (let i = 0; i <= 2; i++) {
+    squadre.push({
+      nome: nomeSquadra[i],
       puntiFatti: 0,
       falliSubiti: 0
-    },
-    {
-      nome: nomeSquadra[1],
-      puntiFatti: 0,
-      falliSubiti: 0
-    },
-    {
-      nome: nomeSquadra[2],
-      puntiFatti: 0,
-      falliSubiti: 0
-    },
-  ];
+    });
+  }
 
   // console.log(squadre);
 
