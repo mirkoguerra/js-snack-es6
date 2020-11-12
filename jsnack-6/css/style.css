@@ -4,3 +4,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*  */
+div {
+  margin-left: 30px;
+}
+p {
+  margin-top: 20px;
+  font-size: 24px;
+}
+p.title {
+  font-weight: 600;
+}
