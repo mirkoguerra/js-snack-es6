@@ -19,6 +19,13 @@ $(document).ready(function(){
   {name: 'Jenny', type: 'borsa', color: 'pink'},
   ];
 
+  const middleArrayObj = [
+  {name: 'Poppy', type: 'tshirt', color: 'red'},
+  {name: 'Jumping', type: 'occhiali', color: 'blue'},
+  {name: 'CrissCross', type: 'scarpe', color: 'black'},
+  {name: 'Jenny', type: 'borsa', color: 'pink'},
+  ];
+
   console.log('array di partenza', arrayObj);
 
   for (let i = 0; i < arrayObj.length; i++){
@@ -35,9 +42,9 @@ $(document).ready(function(){
   }
 
   // nuovo array, uguale al precedente, eccetto per il fatto che gli oggetti in esso contenuto hanno una proprietà aggiuntiva, "position", alla quale è assegnato come valore una lettera casuale
-  const newArrayObj = arrayObj.map(element => {
-    let newObj = {...element, newObj.position = randomLetter()};
-    return newObj;
+  const newArrayObj = middleArrayObj.map(element => {
+    element.position = randomLetter();
+    return element;
   });
 
   console.log('nuovo array', newArrayObj);
