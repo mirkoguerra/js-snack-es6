@@ -35,9 +35,9 @@ $(document).ready(function(){
   }
 
   // nuovo array, uguale al precedente, eccetto per il fatto che gli oggetti in esso contenuto hanno una proprietà aggiuntiva, "position", alla quale è assegnato come valore una lettera casuale
-  const newArrayObj = arrayObj.map((element, index) => {
-    element.position = randomLetter();
-    return element;
+  const newArrayObj = arrayObj.map(element => {
+    let newObj = {...element, newObj.position = randomLetter()};
+    return newObj;
   });
 
   console.log('nuovo array', newArrayObj);
